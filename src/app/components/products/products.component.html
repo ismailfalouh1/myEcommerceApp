@@ -1,1 +1,22 @@
-<p>products works!</p>
+<div class="container mt-4">
+  <div class="row row-cols-md-4 g-4">
+    <ng-container *ngFor="let item of productList">
+
+      <div class="col">
+        <div class="card">
+          <img src="{{ item.image }}" alt="" class="img-fixed-size">
+          <div class="card-body">
+            <div class="card-text">{{ item.title }}</div>
+            <div class="card-text"><strong>Price: </strong> </div>
+            <div class="card-text">{{ item.category }}</div>
+            <p class="card-text description">
+              {{item.description}}
+            </p>
+            <button class="btn btn-primary">Add to cart</button>
+          </div>
+        </div>
+      </div>
+
+    </ng-container>
+  </div>
+</div>
